@@ -13,7 +13,7 @@ export class Shop extends Component {
                  </div>
                  <div className="row">
                    <div className="col-3 p-2">
-                     <CategoryNavigation baseUrl="/shop/products" categories={ this.props.categories}/>
+                     <CategoryNavigation baseUrl="/shop/products" categories={ this.props.categories }/>
                    </div>
                    <div className="col-9 p-2">
                      <ProductList products={ this.props.products } />
