@@ -6,10 +6,11 @@ export class ValidatedForm extends Component {
 
     constructor(props) {
         super(props);
+
         this.state = {
             validationErrors: {}
         };
-        this.formElements= {};
+        this.formElements = {};
     }
 
     handleSubmit = () => {
@@ -27,7 +28,7 @@ export class ValidatedForm extends Component {
                 this.props.submitCallback(data);
             }
         });
-    }
+    };
 
     registerRef = (element) => {
         if (element !== null) {
@@ -38,7 +39,7 @@ export class ValidatedForm extends Component {
     renderElement = (modelItem) => {
         const name = modelItem.name || modelItem.label.toLowerCase();
         return <div className="form-group" key={ modelItem.label }>
-                 <label>{ modelitem.label }</label>
+                 <label>{ modelItem.label }</label>
                  <ValidationError errors={this.state.validationErrors[name]}/>
                  <input className="form-control" name={ name } ref={ this.registerRef } { ...this.props.defaultAttrs } { ...modelItem.attrs }/>
                </div>;

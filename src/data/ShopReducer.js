@@ -13,7 +13,7 @@ export const ShopReducer = (storeData, action) => {
             return { ...storeData, pageSize: action.payload };
         case ActionTypes.DATA_SET_SORT_PROPERTY:
             return { ...storeData, sortKey: action.payload };
-        case ActionTypes.DATA_STORE_:
+        case ActionTypes.DATA_STORE:
             if (action.payload.dataType === DataTypes.ORDERS) {
                 return { ...storeData, order: action.payload.data };
             }
